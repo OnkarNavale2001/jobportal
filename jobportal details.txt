@@ -1,0 +1,129 @@
+alll details of databases
+
+
+mysql> use jobportal
+Database changed
+mysql> show tables;
++---------------------+
+| Tables_in_jobportal |
++---------------------+
+| about_user          |
+| appliedjob          |
+| education           |
+| experience          |
+| jobs                |
+| profile_pics        |
+| register            |
+| resumes             |
++---------------------+
+8 rows in set (0.14 sec)
+
+mysql> desc about_user
+    -> ;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| id      | int          | NO   | PRI | NULL    | auto_increment |
+| email   | varchar(50)  | YES  |     | NULL    |                |
+| about   | varchar(300) | YES  |     | NULL    |                |
+| myskill | varchar(100) | YES  |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+4 rows in set (0.07 sec)
+
+mysql> desc appliedjob;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| id      | int          | NO   | PRI | NULL    | auto_increment |
+| email   | varchar(80)  | YES  |     | NULL    |                |
+| jobdesc | varchar(100) | YES  |     | NULL    |                |
+| jobid   | int          | YES  |     | NULL    |                |
+| date    | varchar(50)  | YES  |     | NULL    |                |
+| time    | varchar(50)  | YES  |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+6 rows in set (0.04 sec)
+
+mysql> desc education;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int          | NO   | PRI | NULL    | auto_increment |
+| email  | varchar(50)  | YES  |     | NULL    |                |
+| school | varchar(200) | YES  |     | NULL    |                |
+| degree | varchar(80)  | YES  |     | NULL    |                |
+| grade  | varchar(100) | YES  |     | NULL    |                |
+| year   | varchar(20)  | YES  |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+6 rows in set (0.04 sec)
+
+mysql> desc experience;
++-------------+---------------+------+-----+---------+----------------+
+| Field       | Type          | Null | Key | Default | Extra          |
++-------------+---------------+------+-----+---------+----------------+
+| id          | int           | NO   | PRI | NULL    | auto_increment |
+| email       | varchar(50)   | YES  |     | NULL    |                |
+| company     | varchar(100)  | YES  |     | NULL    |                |
+| location    | varchar(50)   | YES  |     | NULL    |                |
+| year        | varchar(80)   | YES  |     | NULL    |                |
+| job_title   | varchar(50)   | YES  |     | NULL    |                |
+| description | varchar(1000) | YES  |     | NULL    |                |
++-------------+---------------+------+-----+---------+----------------+
+7 rows in set (0.01 sec)
+
+mysql> desc jobs;
++------------------+---------------+------+-----+---------+----------------+
+| Field            | Type          | Null | Key | Default | Extra          |
++------------------+---------------+------+-----+---------+----------------+
+| id               | int           | NO   | PRI | NULL    | auto_increment |
+| job_profile      | varchar(100)  | YES  |     | NULL    |                |
+| company          | varchar(100)  | YES  |     | NULL    |                |
+| experience       | varchar(100)  | YES  |     | NULL    |                |
+| salary           | varchar(100)  | YES  |     | NULL    |                |
+| no_of_openings   | varchar(100)  | YES  |     | NULL    |                |
+| job_location     | varchar(100)  | YES  |     | NULL    |                |
+| time_venue       | varchar(100)  | YES  |     | NULL    |                |
+| description      | varchar(3000) | YES  |     | NULL    |                |
+| c_email          | varchar(100)  | YES  |     | NULL    |                |
+| c_person_name    | varchar(100)  | YES  |     | NULL    |                |
+| c_person_profile | varchar(100)  | YES  |     | NULL    |                |
+| c_phone_no       | varchar(100)  | YES  |     | NULL    |                |
+| date1            | varchar(100)  | YES  |     | NULL    |                |
+| time1            | varchar(100)  | YES  |     | NULL    |                |
++------------------+---------------+------+-----+---------+----------------+
+15 rows in set (0.05 sec)
+
+mysql> desc profile_pics;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int          | NO   | PRI | NULL    | auto_increment |
+| email | varchar(50)  | YES  |     | NULL    |                |
+| path  | varchar(100) | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+mysql> desc register;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int          | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(255) | NO   |     | NULL    |                |
+| email    | varchar(255) | NO   |     | NULL    |                |
+| password | varchar(255) | NO   |     | NULL    |                |
+| gender   | varchar(10)  | NO   |     | NULL    |                |
+| field    | varchar(255) | NO   |     | NULL    |                |
+| city     | varchar(255) | NO   |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+7 rows in set (0.05 sec)
+
+mysql> desc resumes;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int          | NO   | PRI | NULL    | auto_increment |
+| email | varchar(80)  | YES  |     | NULL    |                |
+| path  | varchar(300) | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+3 rows in set (0.10 sec)
+
+mysql>
